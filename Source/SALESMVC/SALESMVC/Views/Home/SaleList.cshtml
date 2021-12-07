@@ -1,0 +1,49 @@
+﻿@model IEnumerable<SALESMVC.Models.SALE>
+
+@{
+    ViewBag.Title = "SaleList";
+}
+
+<h2>Sale List Use Entity</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AUTO_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INVOICE_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CUSTOMER_MOBILE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TOTAL_AMOUNT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AUTO_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INVOICE_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUSTOMER_MOBILE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TOTAL_AMOUNT)
+        </td>     
+    </tr>
+}
+
+</table>

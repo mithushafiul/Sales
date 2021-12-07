@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SALESDBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SALE">
+    <Key>
+      <PropertyRef Name="INVOICE_NO" />
+    </Key>
+    <Property Name="AUTO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="INVOICE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+    <Property Name="CUSTOMER_MOBILE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TOTAL_AMOUNT" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SALESDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SALES" EntityType="Self.SALE" />
+  </EntityContainer>
+</Schema>

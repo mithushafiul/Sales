@@ -1,0 +1,88 @@
+﻿@*@model SALESMVC.Models.SalePurchase
+
+@{
+    ViewBag.Title = "SalePurchase";
+}*@
+
+@using System.Data
+@model DataSet
+@{
+    Layout = null;
+}
+
+
+
+<div>
+
+  
+        @*@Html.ActionLink("Create New", "Create")*@
+        @*<a class="btn btn-success" href="@Url.Action("exportReport")">Download Report</a>*@
+
+ 
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+     <div class="container">
+        <div class="row header" style="text-align:center;color:green">
+
+            @using (Html.BeginForm("exportReport", "Home", FormMethod.Post))
+            {
+                <p>
+                    Search For Download: @Html.TextBox("SearchString")
+                    <input type="submit" value="Download Report" />
+                </p>
+            }
+
+            @using (Html.BeginForm("SalePurchase", "Home", FormMethod.Post))
+            {
+                <p>
+                    Search For View: @Html.TextBox("SearchString")
+                    <input type="submit" value="Search" />
+                </p>
+            }         
+            <h3>Sale Purchase</h3>
+        </div>
+        <hr />
+         @using (Html.BeginForm("SaleList", "Home", FormMethod.Post))
+         {
+             <p>
+                 <input type="submit" value="Used Entity" />
+             </p>
+         }
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>INVOICE_NO</th>
+                    <th>DATE</th>
+                    <th>ITEM_NAME</th>
+                    <th>SALE</th>
+                    <th>PURCHASE</th>
+                    <th>PROFIT</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (DataRow row in Model.Tables[0].Rows)
+                {
+                    <tr style="text-align:center;">
+                        <td>@row["INVOICE_NO"]</td>
+                        <td>@row["ENTRY_DATE"]</td>
+                        <td>@row["ITEM_NAME"]</td>
+                        <td>@row["SALES_PRICE"]</td>
+                        <td>@row["PURCHASE_PRICE"]</td>
+                        <td>@row["PROFIT"]</td>
+                    </tr>
+                }
+
+                </tbody>
+
+            </table>
+
+
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+   
+    
+</div>

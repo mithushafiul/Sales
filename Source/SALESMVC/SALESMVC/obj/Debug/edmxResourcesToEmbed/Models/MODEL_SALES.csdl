@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SALESDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SALESDBEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="PROFIT_REPORT" ReturnType="Collection(SALESDBModel.PROFIT_REPORT_Result)" />
+  </EntityContainer>
+  <ComplexType Name="PROFIT_REPORT_Result">
+    <Property Type="String" Name="INVOICE_NO" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="DATE" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="ITEM_NAME" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="SALES_PRICE" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PURCHASE_PRICE" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PROFIT" Nullable="true" Precision="19" Scale="2" />
+  </ComplexType>
+</Schema>

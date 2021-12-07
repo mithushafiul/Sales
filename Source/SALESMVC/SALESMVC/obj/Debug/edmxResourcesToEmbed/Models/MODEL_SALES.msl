@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SALESDBModelStoreContainer" CdmEntityContainer="SALESDBEntities">
+    <FunctionImportMapping FunctionImportName="PROFIT_REPORT" FunctionName="SALESDBModel.Store.PROFIT_REPORT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SALESDBModel.PROFIT_REPORT_Result">
+          <ScalarProperty Name="INVOICE_NO" ColumnName="INVOICE_NO" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
+          <ScalarProperty Name="SALES_PRICE" ColumnName="SALES_PRICE" />
+          <ScalarProperty Name="PURCHASE_PRICE" ColumnName="PURCHASE_PRICE" />
+          <ScalarProperty Name="PROFIT" ColumnName="PROFIT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

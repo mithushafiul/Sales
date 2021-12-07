@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SALESDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SALES">
+    <Key>
+      <PropertyRef Name="INVOICE_NO" />
+    </Key>
+    <Property Name="AUTO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INVOICE_NO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="CUSTOMER_MOBILE" Type="nvarchar" MaxLength="50" />
+    <Property Name="TOTAL_AMOUNT" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SALESDBModel1StoreContainer">
+    <EntitySet Name="SALES" EntityType="Self.SALES" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

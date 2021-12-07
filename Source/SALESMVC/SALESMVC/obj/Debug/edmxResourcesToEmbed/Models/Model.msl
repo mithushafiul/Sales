@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SALESDBModel1StoreContainer" CdmEntityContainer="SALESDBEntities1">
+    <EntitySetMapping Name="SALES">
+      <EntityTypeMapping TypeName="SALESDBModel1.SALE">
+        <MappingFragment StoreEntitySet="SALES">
+          <ScalarProperty Name="AUTO_ID" ColumnName="AUTO_ID" />
+          <ScalarProperty Name="INVOICE_NO" ColumnName="INVOICE_NO" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="CUSTOMER_MOBILE" ColumnName="CUSTOMER_MOBILE" />
+          <ScalarProperty Name="TOTAL_AMOUNT" ColumnName="TOTAL_AMOUNT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

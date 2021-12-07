@@ -1,0 +1,8 @@
+# Use Technologies
+
+1. DotNet 4.5
+2. MVC (VS 2013)
+3. MSSQL 2019 (Script To SQL Server 2008R2)
+4. Entity Framework
+5. Bootstrap v3.0.0
+6
